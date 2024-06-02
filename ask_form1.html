@@ -1,0 +1,215 @@
+<head>
+    <style>
+        :root {
+            --clr-neutral-100: #60A3D9;
+            --clr-neutral-200: #75E6DA;
+            --clr-primary-100: #274472;
+            --clr-primary-200: #BFD7ED;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        *:focus {
+            outline: 2px solid var(--clr-primary-100);
+            font-size: 18px;
+        }
+
+        *:focus-visible {
+            outline: none;
+        }
+
+        ::placeholder {
+            color: blueviolet;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            transition: all 0.3s ease-in-out;
+        }
+
+        html {
+            font-size: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 1.3;
+            letter-spacing: 2px;
+            background-color: var(--clr-neutral-100);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+        }
+
+        .form-container {
+            width: 70%;
+            margin: 3em auto;
+            padding: 2em;
+            color: var(--clr-primary-100);
+            background-color: var(--clr-primary-200);
+            border-top: 15px solid;
+            border-radius: 2px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 1em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 0.5em;
+            margin-bottom: 1.5em;
+            color: var(--clr-primary-100);
+            background-color: var(--clr-primary-200);
+            border: 2px solid var(--clr-primary-100);
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .radio {
+            margin-bottom: 2em;
+        }
+
+        p {
+            margin-bottom: 0.5em;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"],
+        #radio,
+        #term {
+            cursor: pointer;
+        }
+
+        fieldset {
+            padding: 0.5em 1em 1em;
+            margin-bottom: 2em;
+            border-radius: 2px;
+            border-color: var(--clr-primary-100);
+        }
+
+        legend {
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: none;
+        }
+
+        .btn {
+            color: var(--clr-primary-200);
+            background-color: var(--clr-primary-100);
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1em 0;
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            color: var(--clr-primary-100);
+            background-color: blueviolet;
+            outline: auto;
+            outline-color: #60A3D9;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media (max-width: 640px) {
+            .form-container {
+                width: 95%;
+            }
+        }
+
+        img {
+            margin-top: 15%;
+            height: 18%;
+            width: 15%;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <script>alert("Invalid Login Credentials Please check and Re-enter")</script>
+    <div align="center"><img src="./logomain.png" alt="" style="margin: 0; padding: 0;"></div>
+    <div class="form-container">
+        <h1>Ask for a Help <br>By the way its not a (Crime)</h1>
+        <form action="ask_formphp.php" class="form" method="post" role="form">
+            <label for="first-name">Fullname of Help Seeker</label>
+            <input type="text" name="fullname" id="first-name" placeholder="Fullname" required>
+
+            <label for="last-name">Phone Number of Help Seeker</label>
+            <input type="text" name="" id="phone" placeholder="Phone Number" required>
+
+            <label for="number">Amount Required</label>
+            <input type="number" name="amount" id="number" placeholder="Amount Required" required>
+
+            <label for="">Address</label>
+            <input type="text" name="address" id="email" placeholder="Address" required>
+            <!--<input type="file" placeholder="Only Image" name="photo">-->
+            <fieldset>
+                <legend>Choose type of help needed (Optional)</legend>
+                <label for="m"><input type="checkbox" id="m"> Medical </label><br>
+                <label for="e"><input type="checkbox" id="e"> Educational </label><br>
+                <label for="n"><input type="checkbox" id="n"> Nutritional </label><br>
+                <br>
+                <label for="subject">Describe about your help</label>
+                <textarea name="subject" id="subject" placeholder="Write something about requirement . . ."
+                    required></textarea>
+                <br>
+                <br>
+                <label for="fname">Username </label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your Username here !!" required>
+                <label for="">Password</label>
+                <input type="password" name="lname" id="lname" placeholder="Enter your Password here!! &#x1F92B;"
+                    required>
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms" id="term">I Agree to the Terms and Conditions</label>
+                <br><br>
+                <input type="reset" value="Reset" class="btn"><br><br>
+                <input type="submit" value="Submit" class="btn">
+
+        </form>
+    </div>
+    <script>
+        // Animation
+
+        // Focus Input
+        window.addEventListener('load', function () {
+            const formInputs = document.querySelectorAll('.form input');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.style.transform = 'scale(1.03)';
+                });
+                input.addEventListener('blur', function () {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
