@@ -61,8 +61,6 @@ Once the project is set up and the database is imported, users can:
 
 ## Contributing
 
-Contributions are welcome! Please follow the [Contributing Guidelines](CONTRIBUTING.md).
+Contributions are welcome! 
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+## Shakeer Samanthapudi
